@@ -47,3 +47,4 @@ btnPrev.addEventListener('click', function () {
 
 
 // article mouseover
+

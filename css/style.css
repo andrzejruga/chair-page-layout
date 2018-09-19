@@ -193,6 +193,7 @@ img {
     color: var(--color);
     cursor: pointer;
     transition: 0.4s all;
+    z-index: 2;
 }
 .banner-next {
     order: 1;
@@ -210,7 +211,7 @@ img {
     transform: scale(1.2);
 }
 .banner-slides {
-    background: yellow;
+    background: none;
     flex-grow: 1;
     position: relative;
 }
@@ -220,13 +221,30 @@ img {
     top: 0;
     width: 100%;
     height: 100%;
-    font-size: 100px;
     opacity: 0;
     transition: 0.5s all;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.banner-slide img {
+    margin-left: -100px;
+    margin-right: -50px;
 }
 .banner-slide-active {
     opacity: 1;
     z-index: 1;
+}
+.banner-slide-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 50px;
+    text-align: center;
+}
+.banner-slide-text p {
+    font-size: 14px;
+    line-height: 1.5;
 }
 .banner-slide-title {
     position: relative;
@@ -234,9 +252,24 @@ img {
     opacity: 0;
     transition: 0.5s all;
 }
+.banner-slide-title {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.banner-slide-title span {
+    color: var(--color);
+    font-weight: 700;
+}
 .banner-slide-active .banner-slide-title {
     top: 0;
     opacity: 1;
+}
+.banner-button {
+    font-size: 24px;
+    font-weight: 500;
+    padding: 15px 50px;
 }
 
 
